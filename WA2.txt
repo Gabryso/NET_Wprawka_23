@@ -3,7 +3,7 @@ Wprawka 2
 Gabriel Ostaszewski
 nr.117239 PS3
 
-Rozwiązanie znajduje się na głównym branchu main.
+Rozwiązanie znajduje się na głównym branchu mainmain.
 Powodem spóźnienia jest zepsucie bazy i niedziałające na niej funkcje w dzień oddania wprawki.
 Postanowieniem było więc zrobienie nowej bazy zachaczającej od razu o projekt i utworzenie jej na niej.
 Z góry przepraszam za opóźnienie i wszelkie niedogodności z tym związane.

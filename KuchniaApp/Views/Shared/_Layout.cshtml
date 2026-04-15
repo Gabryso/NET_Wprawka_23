@@ -32,6 +32,22 @@
                             <a class="nav-link text-dark" asp-controller="Ingredients" asp-action="Index">Składniki</a>
                         </li>
                     </ul>
+                    <div class="navbar-nav ms-auto">
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            <span class="navbar-text me-3">
+                                <strong>@User.Identity.Name</strong>
+                            </span>
+                            <form asp-action="Logout" asp-controller="Account" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-outline-danger btn-sm">Wyloguj</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <a asp-action="Login" asp-controller="Account" class="btn btn-outline-dark btn-sm me-2">Zaloguj</a>
+                            <a asp-action="Register" asp-controller="Account" class="btn btn-dark btn-sm">Rejestracja</a>
+                        }
+                    </div>
                 </div>
             </div>
         </nav>

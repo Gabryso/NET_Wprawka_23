@@ -4,9 +4,11 @@ using KuchniaApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace KuchniaApp.Controllers
 {
+    [Authorize]
     public class RecipesController : Controller
     {
         private readonly AppDbContext _context;
@@ -58,6 +60,11 @@ namespace KuchniaApp.Controllers
             {
                 recipe.CreatedAt = DateTime.Now;
                 _context.Recipes.Add(recipe);
+                var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+                if (userIdClaim != null && int.TryParse(userIdClaim.Value, out int userId))
+                {
+                    recipe.AppUserId = userId;
+                }
                 await _context.SaveChangesAsync();
 
                 foreach (var ingId in selectedIngredientIds)

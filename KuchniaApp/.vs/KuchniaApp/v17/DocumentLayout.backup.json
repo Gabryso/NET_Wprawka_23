@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Pulpit\\.NET\\NET_Wprawka_23\\KuchniaApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B7A4004D-B950-4880-BE39-BA0D6E7D6F0D}|KuchniaApp.csproj|c:\\users\\user\\onedrive\\pulpit\\.net\\net_wprawka_23\\kuchniaapp\\views\\recipes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7A4004D-B950-4880-BE39-BA0D6E7D6F0D}|KuchniaApp.csproj|solutionrelative:views\\recipes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7A4004D-B950-4880-BE39-BA0D6E7D6F0D}|KuchniaApp.csproj|c:\\users\\user\\onedrive\\pulpit\\.net\\net_wprawka_23\\kuchniaapp\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7A4004D-B950-4880-BE39-BA0D6E7D6F0D}|KuchniaApp.csproj|solutionrelative:controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7A4004D-B950-4880-BE39-BA0D6E7D6F0D}|KuchniaApp.csproj|c:\\users\\user\\onedrive\\pulpit\\.net\\net_wprawka_23\\kuchniaapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7A4004D-B950-4880-BE39-BA0D6E7D6F0D}|KuchniaApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Pulpit\\.NET\\NET_Wprawka_23\\KuchniaApp\\Views\\Recipes\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Recipes\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Pulpit\\.NET\\NET_Wprawka_23\\KuchniaApp\\Views\\Recipes\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Recipes\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-15T16:40:39.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RecipesController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Pulpit\\.NET\\NET_Wprawka_23\\KuchniaApp\\Controllers\\RecipesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RecipesController.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Pulpit\\.NET\\NET_Wprawka_23\\KuchniaApp\\Controllers\\RecipesController.cs",
-              "RelativeToolTip": "Controllers\\RecipesController.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T16:39:07.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Pulpit\\.NET\\NET_Wprawka_23\\KuchniaApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Pulpit\\.NET\\NET_Wprawka_23\\KuchniaApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-15T16:34:58.405Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

@@ -1,10 +1,12 @@
 ﻿using KuchniaApp.Data;
 using KuchniaApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace KuchniaApp.Controllers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
         private readonly AppDbContext _context;

@@ -255,3 +255,4 @@ C:\Users\user\OneDrive\Pulpit\.NET\NET_Wprawka_23\KuchniaApp\bin\Debug\net8.0\ru
 C:\Users\user\OneDrive\Pulpit\.NET\NET_Wprawka_23\KuchniaApp\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\user\OneDrive\Pulpit\.NET\NET_Wprawka_23\KuchniaApp\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\user\OneDrive\Pulpit\.NET\NET_Wprawka_23\KuchniaApp\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\user\OneDrive\Pulpit\.NET\NET_Wprawka_23\KuchniaApp\obj\Debug\net8.0\KuchniaApp.sourcelink.json
