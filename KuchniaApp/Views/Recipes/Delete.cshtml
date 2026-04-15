@@ -1,0 +1,16 @@
+﻿@model KuchniaApp.Models.Recipe
+
+@{
+    ViewData["Title"] = "Usuń przepis";
+}
+
+<div class="container mt-4">
+    <div class="alert alert-danger">
+        <h4>Czy na pewno chcesz usunąć przepis?</h4>
+        <p><strong>@Model.Title</strong> – @Model.Category?.Name</p>
+    </div>
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <button type="submit" class="btn btn-danger">Tak, usuń</button>
+        <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+    </form>
+</div>

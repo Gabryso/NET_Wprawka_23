@@ -1,0 +1,51 @@
+﻿@model List<KuchniaApp.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Przepisy";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Książka kucharska Cygana</h1>
+
+    <form method="get" asp-action="Index" asp-controller="Home" class="row g-2 mb-4">
+        <div class="col-md-4">
+            <select name="categoryId" class="form-select" asp-items="ViewBag.Categories">
+                <option value="">-- Wszystkie kategorie --</option>
+            </select>
+        </div>
+        <div class="col-md-5">
+            <input type="text" name="search" class="form-control"
+                   placeholder="Szukaj przepisu..." value="@ViewBag.CurrentSearch" />
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary w-100">Filtruj</button>
+        </div>
+    </form>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Nie znaleziono żadnych przepisów.</div>
+    }
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var recipe in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">@recipe.Category?.Name</span>
+                        <h5 class="card-title">@recipe.Title</h5>
+                        <p class="card-text text-muted">@recipe.Description</p>
+                        <small class="text-muted">
+                            Prep: @recipe.PrepTimeMinutes min | Gotowanie: @recipe.CookTimeMinutes min
+                        </small>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <a asp-action="Details" asp-controller="Recipes"
+                           asp-route-id="@recipe.Id" class="btn btn-outline-primary btn-sm">Szczegóły</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

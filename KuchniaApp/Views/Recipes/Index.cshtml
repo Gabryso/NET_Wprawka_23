@@ -1,0 +1,43 @@
+﻿@model List<KuchniaApp.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Przepisy – zarządzanie";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Przepisy</h2>
+        <a asp-action="Create" class="btn btn-success">+ Dodaj przepis</a>
+    </div>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Tytuł</th>
+                <th>Kategoria</th>
+                <th>Czas przygotowania</th>
+                <th>Dodano</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recipe in Model)
+            {
+                <tr>
+                    <td>@recipe.Title</td>
+                    <td><span class="badge bg-success">@recipe.Category?.Name</span></td>
+                    <td>@recipe.PrepTimeMinutes min</td>
+                    <td>@recipe.CreatedAt.ToShortDateString()</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@recipe.Id"
+                           class="btn btn-sm btn-info">Szczegóły</a>
+                        <a asp-action="Edit" asp-route-id="@recipe.Id"
+                           class="btn btn-sm btn-warning">Edytuj</a>
+                        <a asp-action="Delete" asp-route-id="@recipe.Id"
+                           class="btn btn-sm btn-danger">Usuń</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

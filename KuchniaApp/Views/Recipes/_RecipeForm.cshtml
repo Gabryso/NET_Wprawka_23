@@ -1,0 +1,64 @@
+﻿@model KuchniaApp.ViewModels.RecipeFormViewModel
+
+<div class="mb-3">
+    <label asp-for="Recipe.Title" class="form-label"></label>
+    <input asp-for="Recipe.Title" class="form-control" />
+    <span asp-validation-for="Recipe.Title" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Recipe.Description" class="form-label"></label>
+    <textarea asp-for="Recipe.Description" class="form-control" rows="2"></textarea>
+</div>
+<div class="mb-3">
+    <label asp-for="Recipe.CategoryId" class="form-label"></label>
+    <select asp-for="Recipe.CategoryId" asp-items="Model.Categories"
+            class="form-select">
+        <option value="">-- wybierz kategorię --</option>
+    </select>
+    <span asp-validation-for="Recipe.CategoryId" class="text-danger"></span>
+</div>
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label asp-for="Recipe.PrepTimeMinutes" class="form-label"></label>
+        <input asp-for="Recipe.PrepTimeMinutes" class="form-control" type="number" />
+        <span asp-validation-for="Recipe.PrepTimeMinutes" class="text-danger"></span>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label asp-for="Recipe.CookTimeMinutes" class="form-label"></label>
+        <input asp-for="Recipe.CookTimeMinutes" class="form-control" type="number" />
+    </div>
+</div>
+<div class="mb-3">
+    <label asp-for="Recipe.Instructions" class="form-label"></label>
+    <textarea asp-for="Recipe.Instructions" class="form-control" rows="5"></textarea>
+    <span asp-validation-for="Recipe.Instructions" class="text-danger"></span>
+</div>
+
+<h5>Składniki</h5>
+<table class="table table-sm">
+    <thead><tr><th>Wybierz</th><th>Składnik</th><th>Ilość</th></tr></thead>
+    <tbody>
+        @for (int i = 0; i < Model.AvailableIngredients.Count; i++)
+        {
+            var ing = Model.AvailableIngredients[i];
+            var isSelected = Model.SelectedIngredientIds.Contains(ing.Id);
+            Model.Quantities.TryGetValue(ing.Id, out var qty);
+            <tr>
+                <td>
+                    <input type="checkbox"
+                           name="selectedIngredientIds"
+                           value="@ing.Id"
+                    @(isSelected ? "checked" : "") />
+                </td>
+                <td>@ing.Name (@ing.DefaultUnit)</td>
+                <td>
+                    <input type="text"
+                           name="quantities[@ing.Id]"
+                           class="form-control form-control-sm"
+                           placeholder="np. 200g"
+                           value="@qty" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

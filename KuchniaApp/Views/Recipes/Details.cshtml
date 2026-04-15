@@ -1,0 +1,44 @@
+﻿@model KuchniaApp.Models.Recipe
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-dark text-white d-flex justify-content-between">
+            <h3>@Model.Title</h3>
+            <span class="badge bg-success fs-6">@Model.Category?.Name</span>
+        </div>
+        <div class="card-body">
+            <p class="text-muted">@Model.Description</p>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>Przygotowanie:</strong> @Model.PrepTimeMinutes min<br />
+                    <strong>Gotowanie:</strong> @Model.CookTimeMinutes min<br />
+                    <strong>Autor:</strong> @(Model.AppUser?.FirstName ?? "Anonim")
+                </div>
+            </div>
+            <hr />
+            <h5>Składniki:</h5>
+            @if (Model.RecipeIngredients != null && Model.RecipeIngredients.Any())
+            {
+                <ul class="list-group mb-3">
+                    @foreach (var ri in Model.RecipeIngredients)
+                    {
+                        <li class="list-group-item">
+                            @ri.Ingredient?.Name – <strong>@ri.Quantity</strong>
+                        </li>
+                    }
+                </ul>
+            }
+            <h5>Sposób przygotowania:</h5>
+            <p style="white-space: pre-line;">@Model.Instructions</p>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edytuj</a>
+            <a asp-action="Index" class="btn btn-secondary">Powrót</a>
+        </div>
+    </div>
+</div>
